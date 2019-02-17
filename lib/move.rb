@@ -1,4 +1,3 @@
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -7,12 +6,14 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def input_to_index(input)
-   index = input.to_i - 1
+
+def input_to_index(move_string)
+  x = move_string.to_i
+  x - 1
 end
 
-def move(board,converted_input,value="X")
- board[converted_input] = value
+def move(array, index, value='X')
+  array[index] = value
+  array
 end
-
 
